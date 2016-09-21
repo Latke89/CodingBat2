@@ -18,10 +18,10 @@ public class CloseFar {
 			return false;
 		} else if ((Math.abs(a - b) >= 2) && (Math.abs(a - c) >= 2)) {
 			return false;
+		}else if (((a == b) || (a == c)) && (((Math.abs(a - b) >= 2) || (Math.abs(a - c) >= 2)))) {
+			return true;
 		} else if ((Math.max(a, Math.max(b, c)) - Math.min(a, Math.min(b, c))) == 2) {
 			return false;
-		} else if (((a == b) || (a == c)) && (((Math.abs(a - b) >= 2) || (Math.abs(a - c) >= 2)))) {
-			return true;
 		}
 
 		return true;
